@@ -39,6 +39,7 @@ body {
   color: #38bdf8;
 }
 
+/* ===== Desktop Nav ===== */
 nav ul {
   list-style: none;
   display: flex;
@@ -56,11 +57,48 @@ nav a:hover {
   color: #38bdf8;
 }
 
+/* ===== Hamburger Button ===== */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+/* ===== Mobile Sidebar ===== */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #020617;
+    padding-top: 90px;
+    transition: right 0.3s ease;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+  }
+
+  nav.active {
+    right: 0;
+  }
+}
+
 /* Offset for fixed navbar */
 .hero,
 .section {
   scroll-margin-top: 90px;
 }
+
 
 /* ================= HERO ================= */
 .hero {
