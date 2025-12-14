@@ -67,14 +67,17 @@ nav a:hover {
 
 /* ===== Mobile Sidebar ===== */
 @media (max-width: 768px) {
+
+  /* show hamburger */
   .menu-btn {
     display: block;
   }
 
+  /* sidebar nav */
   nav {
     position: fixed;
     top: 0;
-    right: -260px;
+    right: -260px;        /* hidden by default */
     width: 260px;
     height: 100vh;
     background: #020617;
@@ -84,10 +87,15 @@ nav a:hover {
 
   nav ul {
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     padding-left: 30px;
   }
 
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  /* 👇 IMPORTANT: sidebar open state */
   nav.active {
     right: 0;
   }
